@@ -30,14 +30,14 @@ const items = [
     getItem('Alex', '5'),
   ]),
   getItem('Team', 'sub2', <TeamOutlined />, [
-    getItem('Team 1', '6'), 
+    getItem('Team 1', '6'),
     getItem('Team 2', '8')
   ]),
   getItem('Files', '9', <FileOutlined />),
 ];
 
 const App = () => {
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
   const {
     token: { colorBgContainer },
   } = theme.useToken();
@@ -79,7 +79,9 @@ const App = () => {
             transition: 'margin-left .3s',
           }}
         >
-          <Header style={{ background: colorBgContainer, }} />
+          <Header style={{ background: colorBgContainer, }}>
+
+          </Header>
 
           <Content
             style={{
